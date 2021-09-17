@@ -1,1 +1,74 @@
 /*Maak hier jouw CSS!*/
+
+/*Grid mobile*/
+@media screen and (max-width: 800px) {
+    .container {
+        background-color: #fcf0de;
+        display: grid;
+        margin: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, minmax(50px, auto));
+        grid-gap: 16px;
+        grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d"
+    "e"
+    "."
+    "f";
+    }
+}
+
+.grid-item {
+    background-color: #ad4246;
+    display: flex;
+    color: white;
+    border: 1px solid #914042;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.grid-a {
+    grid-area: a;
+}
+
+.grid-b {
+    grid-area: b;
+
+}
+
+.grid-c {
+    grid-area: c;
+}
+
+.grid-e {
+    grid-area: d;
+}
+
+.grid-d {
+    grid-area: e;
+}
+
+.grid-f {
+    grid-area: f;
+}
+
+/*Grid Desktop*/
+@media screen and (min-width: 800px) {
+    .container {
+        background-color: #fcf0de;
+        display: grid;
+        margin: 0;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 50px 190px 100px auto 50px;
+        grid-gap: 16px;
+        grid-template-areas:
+    "a c c"
+    "b c c"
+    "b e d"
+    "b e ."
+    "f f f";
+    }
+}
